@@ -52,14 +52,14 @@ function cuttingLetters(start, end, string) {
   }
 }
 makeAlias(personsIn);
-console.log("Zadanie1", personsIn);
+////////////////////////////////console.log("Zadanie1", personsIn);
 
 // Zadanie 2
 function personsWithNickname(persons) {
   const nickPersons = persons.filter(
     (person) => typeof person.nickname === "string"
   );
-  nickPersons.forEach(({ firstName, lastName }, indeks, key) => {
+  nickPersons.forEach(({ firstName, lastName }, indeks) => {
     if ((firstName.length + lastName.length) % 2 == 0) {
       nickPersons[indeks].age = firstName.length + lastName.length;
     } else {
@@ -75,6 +75,7 @@ function personsWithNickname(persons) {
 }
 const personsWithAge = personsWithNickname(personsIn);
 console.log("Zadanie 2:", personsWithAge);
+
 // Zadanie 3
 // Stwórz funkcję, która analizuje tablicę osób z drugiego zadania i znajduje najczęściej
 //  występującą literę w polach firstName, lastName oraz nickname dla każdej osoby.
@@ -88,3 +89,38 @@ console.log("Zadanie 2:", personsWithAge);
 //  > Zwróć nową tablicę z obiektami, które zawierają imię, nazwisko, pseudonim oraz dodaj nową
 //     właściwość do każdej osoby o nazwie mostCommonLetter, której wartością będzie obiekt
 //     z kluczem litery oraz ilością jej wystąpień.
+
+function mostPopularChar(word) {
+  const wordTab = word.toLowerCase().split("");
+  let counts = {};
+  wordTab.forEach((val) => {
+    counts[val] = (counts[val] || 0) + 1;
+  });
+  counts = Object.entries(counts).reduce((max, curr) => {
+    if (curr[1] > max[1]) {
+      return curr;
+    } else if (curr[1] < max[1]) {
+      return max;
+    } else if (curr[1] === max[1]) {
+      if (curr[0].charCodeAt() > max[0].charCodeAt()) {
+        return max;
+      } else if (curr[0].charCodeAt() < max[0].charCodeAt()) {
+        return curr;
+      }
+    }
+  });
+  return counts;
+}
+function analyzePersons(persons) {
+  let temp;
+  persons.forEach((element) => {
+    temp = mostPopularChar(
+      element.firstName + element.lastName + element.nickname
+    );
+    element.mostCommonLetter = { letter: temp[0], count: temp[1] };
+  });
+}
+
+analyzePersons(personsWithAge);
+console.log("Zadanie 3: ", personsWithAge);
+// console.log(array.indexOf("m"));
