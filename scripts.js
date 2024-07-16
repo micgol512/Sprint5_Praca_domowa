@@ -1,4 +1,3 @@
-console.clear();
 const personsIn = [
   {
     firstName: false,
@@ -27,7 +26,7 @@ const personsIn = [
   },
 ];
 // ZADANIE 1
-function makeAlias(persons) {
+function makeNickname(persons) {
   persons.forEach((person) => {
     let nick = "";
     if (
@@ -51,8 +50,8 @@ function cuttingLetters(start, end, string) {
     return string.slice(start, end).toLowerCase().split("").reverse().join("");
   }
 }
-makeAlias(personsIn);
-////////////////////////////////console.log("Zadanie1", personsIn);
+makeNickname(personsIn);
+console.log("Zadanie 1: ", personsIn);
 
 // Zadanie 2
 function personsWithNickname(persons) {
@@ -60,16 +59,16 @@ function personsWithNickname(persons) {
     (person) => typeof person.nickname === "string"
   );
   nickPersons.forEach(({ firstName, lastName }, indeks) => {
-    if ((firstName.length + lastName.length) % 2 == 0) {
-      nickPersons[indeks].age = firstName.length + lastName.length;
-    } else {
-      nickPersons[indeks].age = Math.ceil(
+    let age = firstName.length + lastName.length;
+    if (age % 2 !== 0) {
+      age = Math.ceil(
         Object.keys(nickPersons[indeks]).reduce(
           (sum, key) => (sum += key.length),
           0
         ) / (indeks === 0 ? 1 : index)
       );
     }
+    nickPersons[indeks].age = age;
   });
   return nickPersons;
 }
@@ -77,24 +76,12 @@ const personsWithAge = personsWithNickname(personsIn);
 console.log("Zadanie 2:", personsWithAge);
 
 // Zadanie 3
-// Stwórz funkcję, która analizuje tablicę osób z drugiego zadania i znajduje najczęściej
-//  występującą literę w polach firstName, lastName oraz nickname dla każdej osoby.
-// Wynik powinien zawierać literę i jej liczbę wystąpień, a także określić, co zrobić w przypadku,
-//  gdy dwie litery mają tę samą liczbę wystąpień.
-// Wytyczne:
-//  > Przetwarzaj każdy obiekt osoby, analizując pola firstName, lastName, i nickname.
-//  > Zliczaj wystąpienia każdej litery w tych polach i znajdź najczęściej występującą literę.
-//  > Jeżeli dwie lub więcej liter mają tę samą liczbę wystąpień i jest to najwyższa wartość,
-//     wybierz literę, która występuje pierwsza w alfabecie.
-//  > Zwróć nową tablicę z obiektami, które zawierają imię, nazwisko, pseudonim oraz dodaj nową
-//     właściwość do każdej osoby o nazwie mostCommonLetter, której wartością będzie obiekt
-//     z kluczem litery oraz ilością jej wystąpień.
-
 function mostPopularChar(word) {
   const wordTab = word.toLowerCase().split("");
   let counts = {};
-  wordTab.forEach((val) => {
-    counts[val] = (counts[val] || 0) + 1;
+  wordTab.forEach((value) => {
+    //Tu podziękowania za ostatniego live z pytaniem o sprawdzanie czy liczba "undefined" wiele mi tu uprościło :)
+    counts[value] = (counts[value] || 0) + 1;
   });
   counts = Object.entries(counts).reduce((max, curr) => {
     if (curr[1] > max[1]) {
@@ -102,9 +89,9 @@ function mostPopularChar(word) {
     } else if (curr[1] < max[1]) {
       return max;
     } else if (curr[1] === max[1]) {
-      if (curr[0].charCodeAt() > max[0].charCodeAt()) {
+      if (curr[0] > max[0]) {
         return max;
-      } else if (curr[0].charCodeAt() < max[0].charCodeAt()) {
+      } else if (curr[0] < max[0]) {
         return curr;
       }
     }
@@ -112,9 +99,8 @@ function mostPopularChar(word) {
   return counts;
 }
 function analyzePersons(persons) {
-  let temp;
   persons.forEach((element) => {
-    temp = mostPopularChar(
+    const temp = mostPopularChar(
       element.firstName + element.lastName + element.nickname
     );
     element.mostCommonLetter = { letter: temp[0], count: temp[1] };
@@ -123,4 +109,3 @@ function analyzePersons(persons) {
 
 analyzePersons(personsWithAge);
 console.log("Zadanie 3: ", personsWithAge);
-// console.log(array.indexOf("m"));
