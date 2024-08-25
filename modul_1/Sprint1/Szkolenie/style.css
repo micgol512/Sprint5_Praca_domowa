@@ -1,0 +1,433 @@
+:root {
+  font-size: 16px;
+  --fireBrick: #b22222;
+  --saddleBrown: #8b4513;
+  --darkGoldenRod: #b8860b;
+  --darkSlateBlue: #483d8b;
+  --darkOliveGreen: #556b2f;
+  --darkCyan: #008b8b;
+  --white: #fff;
+  --black: #000;
+  --lightgray: #d3d3d3;
+  --beige: rgba(184, 134, 11, 0.2);
+  --shadowElement: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  --shadowText: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+body {
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  display: flex;
+  flex-flow: column wrap;
+}
+main {
+  background-color: var(--beige);
+  padding: 1rem;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* main > div > section {
+  display: block;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 1rem;
+} */
+main > div > section:nth-child(1) {
+  order: 3;
+}
+/* main > div > section:nth-child(2) {
+  order: 1;
+}
+main > div > section:nth-child(3) {
+  order: 2;
+} */
+header,
+footer {
+  padding: 1rem;
+  background-color: var(--white);
+  background-image: url("https://img.freepik.com/premium-photo/serenity-unfolds-tranquil-undisturbed-natural-landscapes_917664-75958.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+h1 {
+  font-size: 3rem;
+  z-index: 1;
+  margin-top: 0;
+  color: var(--white);
+}
+h2 {
+  font-size: 2rem;
+  position: sticky;
+  top: 10px;
+  width: 100%;
+  color: var(--darkOliveGreen);
+}
+div > section > h2::first-letter {
+  color: var(--fireBrick);
+}
+h3 {
+  color: var(--darkGoldenRod);
+}
+h3::selection {
+  color: var(--white);
+  background: var(--fireBrick);
+}
+h4 {
+  color: var(--saddleBrown);
+}
+h1,
+h2,
+h3,
+a {
+  text-shadow: var(--shadowText);
+}
+
+a {
+  transition: color 0.3s linear, border 200ms ease-in-out;
+}
+video {
+  height: 15rem;
+}
+header {
+  width: 100%;
+  padding: 2rem 0;
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  min-height: 10rem;
+  align-self: center;
+  /*   background-color: var(--white);
+  background-image: url("https://img.freepik.com/premium-photo/serenity-unfolds-tranquil-undisturbed-natural-landscapes_917664-75958.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center; */
+}
+header ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  /* margin: 0; */
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+}
+header a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+header > div {
+  display: flex;
+  /* width: 70vw; */
+  flex-flow: row wrap;
+  justify-content: space-between;
+  column-gap: 32px;
+}
+/* header > video {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  height: 100%;
+} */
+header > div,
+section {
+  width: min(70vw, 85rem);
+  /* padding: 1rem; */
+}
+section div {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+td,
+th {
+  border: 0.125rem solid black;
+  padding: 0 0.5rem;
+}
+form > div > button {
+  padding: 0.5rem 1rem;
+  border: 0;
+  border-radius: 0.5rem;
+  flex-grow: 1;
+}
+/* form > button:nth-of-type(1):hover {
+  background-color: var(--darkOliveGreen);
+}
+form > button:nth-of-type(2):hover {
+  background-color: var(--fireBrick);
+} */
+/* form > button:hover {
+  background-color: var(--darkOliveGreen);
+}
+button + button:hover {
+  background-color: var(--fireBrick);
+} */
+form {
+  /* background-color: blue; */
+  display: flex;
+  flex-flow: column wrap;
+  align-content: stretch;
+  justify-content: center;
+  gap: 1rem;
+  width: 50%;
+}
+form > div > button:first-child:hover {
+  border: 0;
+  border-radius: 0.5rem;
+  background-color: var(--darkOliveGreen);
+}
+form > div > button:last-child:hover {
+  border: 0;
+  border-radius: 0.5rem;
+  background-color: var(--fireBrick);
+}
+form > div {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+button {
+  box-shadow: var(--shadowElement);
+  transition: 0.5s;
+}
+button:hover {
+  transform: scale(105%);
+}
+input:focus {
+  background-color: var(--darkOliveGreen);
+  color: var(--white);
+}
+li,
+.formElement {
+  margin-bottom: 0.5rem;
+}
+img {
+  height: 3.125rem;
+  transition: 1s;
+}
+img:hover {
+  transform: rotate(360deg);
+}
+td img {
+  height: 2.5rem;
+}
+ul {
+  display: inline-block;
+}
+a:link,
+a:visited {
+  color: var(--darkGoldenRod);
+}
+a:hover {
+  color: var(--white);
+  border-bottom: 5px solid #fff;
+}
+footer {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+footer > section > div > span {
+  color: var(--white);
+  font-size: 1.5rem;
+}
+footer ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+footer a {
+  text-decoration: none;
+}
+/* footer p::before,
+footer p::after {
+  content: " | ";
+} */
+footer p {
+  /* position: fixed; */
+  /*  bottom: 0; */
+  right: 1rem;
+  align-self: center;
+  color: var(--fireBrick);
+}
+footer section {
+  display: flex;
+}
+article {
+  display: flex;
+  width: 25rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--lightgray);
+  flex-direction: column;
+  flex-wrap: wrap;
+  box-shadow: var(--shadowElement);
+}
+article p {
+  height: 4rem;
+}
+article span {
+  font-weight: 600;
+}
+article > h3 {
+  display: block;
+}
+article > label {
+  color: var(--saddleBrown);
+}
+select {
+  height: 2rem;
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: var(--shadowElement);
+}
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  height: 2rem;
+  border-radius: 0.5rem;
+  border: 0;
+  flex-grow: 1;
+  box-shadow: var(--shadowElement);
+}
+/* input[type="text"]:hover,
+input[type="text"]:focus,
+input[type="email"]:hover,
+input[type="email"]:focus,
+input[type="password"]:hover,
+input[type="password"]:focus {
+  transform: scaleX(1.1);
+} */
+input[type="checkbox"],
+input[type="radio"] {
+  width: 1.5rem;
+  height: 1.5rem;
+  align-self: center;
+}
+/* KLASY */
+/* .menu {
+  font-size: 1.5rem;
+  font-weight: 600;
+} */
+/* .fireBrick {
+  color: var(--fireBrick);
+}
+.saddleBrown {
+  color: var(--saddleBrown);
+}
+.darkGoldenRod {
+  color: var(--darkGoldenRod);
+}
+.darkSlateBlue {
+  color: var(--darkOliveGreen);
+}
+.darkOliveGreen {
+  color: var(--darkOliveGreen);
+}
+.darkOliveGreen::first-letter {
+  color: var(--fireBrick);
+}
+.darkCyan {
+  color: #008b8b;
+} */
+/* .headerFilter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: var(--fireBrick);
+  height: 100%;
+  width: 100%;
+} */
+
+.formWrapp {
+  display: flex;
+  /* background-color: aqua; */
+  flex-flow: row;
+  justify-content: center;
+  width: 100%;
+  /* flex-wrap: nowrap; */
+}
+.loginHeader {
+  color: var(--darkSlateBlue);
+}
+/* .inputLogin {
+  height: 2rem;
+  border-radius: 0.5rem;
+  border: 0;
+  flex-grow: 1;
+} */
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.ball {
+  background-color: var(--fireBrick);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 5rem;
+  right: 4rem;
+  animation: orbit2 3s linear infinite;
+}
+.articles-container {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(auto-fill, 25rem);
+  /* grid-template: "article"; */
+}
+
+/* responsywność */
+@media (max-width: 1440px) {
+  header > div {
+    justify-content: center;
+  }
+  section > h2 {
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  section > h4,
+  section > table {
+    display: none;
+  }
+}
+@keyframes orbit1 {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(3rem) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg) translateX(3rem)
+      rotate(-360deg);
+  }
+}
+@keyframes orbit2 {
+  from {
+    transform: rotate(0turn) translateX(3rem);
+  }
+  to {
+    transform: rotate(1turn) translateX(3rem);
+  }
+}

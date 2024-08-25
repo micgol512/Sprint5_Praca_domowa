@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <title>Moja Strona</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Opis mojej strony co w niej jest" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Michał Gołębiowski" />
+    <meta name="keyworld" content="jakieś,krótkie, słowa" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>Ciekawostki ze świata</h1>
+        <!-- <nav> -->
+        <ul>
+          <li>
+            <a href="#games" title="Gry komputerowe"> Gry komputerowe </a>
+          </li>
+          <li>
+            <a href="#cars" title="Samochody"> Samochody </a>
+          </li>
+          <li>
+            <a href="#traveling" title="Podróże"> Podróże </a>
+          </li>
+        </ul>
+        <!-- </nav> -->
+        <!--       <video src="./Media/Atomy.mp4" controls autoplay muted loop></video>
+      <div class="headerFilter"></div> -->
+      </div>
+      <div class="ball"></div>
+    </header>
+    <main>
+      <section>
+        <h2 class="loginHeader">Logowanie</h2>
+        <div class="formWrapp">
+          <form>
+            <input
+              type="text"
+              id="input-name"
+              name="firstname"
+              placeholder="Imię"
+              required
+              minlength="3"
+              maxlength="15"
+            />
+            <input
+              type="email"
+              id="input-email"
+              name="email"
+              placeholder="Email"
+              required
+            />
+            <input
+              type="password"
+              id="input-password"
+              name="password"
+              placeholder="Hasło"
+            />
+            <div>
+              <label for="check-activity">Zapis aktywności</label>
+              <input
+                type="checkbox"
+                id="check-activity"
+                name="activity"
+                required
+              />
+            </div>
+            <div>
+              <span>Czy wrócisz do nas jeszcze? </span>
+              <div>
+                <label for="radio-yes">Tak</label>
+                <input type="radio" id="radio-yes" name="comeback" checked />
+                <label for="radio-no">Nie</label>
+                <input type="radio" id="radio-no" name="comeback" />
+              </div>
+            </div>
+            <div>
+              <button type="submit">Wyślij</button>
+              <button type="reset">Reset</button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <div>
+        <section>
+          <h2>Gry komputerowe</h2>
+          <div class="articles-container">
+            <article>
+              <div>
+                <h3>Wiedźmin 3</h3>
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/en/5/53/The_Witcher_video_game_series_logo.png"
+                  alt="Logo Wiedźmin"
+                  title="Wiedźmin 3"
+                />
+              </div>
+              <p>
+                Gra action RPG, stanowiąca trzecią część przygód
+                <strong>Geralta z Rivii</strong>.
+              </p>
+            </article>
+            <article>
+              <div>
+                <h3>Gran Tourusimo 7</h3>
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Gran_Turismo_7_logo.svg/2560px-Gran_Turismo_7_logo.svg.png"
+                  alt="Logo Gran Tourusimo 7"
+                  title="Gran Tourusimo 7"
+                />
+              </div>
+              <p>
+                Siódma pełnoprawna odsłona flagowego cyklu
+                <strong>symulatorów samochodowych</strong>.
+              </p>
+            </article>
+            <article>
+              <div>
+                <h3>FIFA 22</h3>
+                <img
+                  src="https://cdn2.downdetector.com/static/uploads/logo/Fifa-ea.png"
+                  alt="Logo FIFA 22"
+                  title="FIFA 22"
+                />
+              </div>
+              <p>
+                FIFA 22 to kolejna odsłona corocznego cyklu
+                <strong>gier piłkarskich.</strong>
+              </p>
+            </article>
+          </div>
+        </section>
+        <section>
+          <h2>Samochody</h2>
+          <div class="articles-container">
+            <article>
+              <div>
+                <h3>BMW</h3>
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/BMW.svg/2048px-BMW.svg.png"
+                  alt="Logo BMW"
+                  title="BMW"
+                />
+              </div>
+              <p>
+                <strong>Niemiecki koncern motoryzacyjny</strong> produkujący od
+                1916 roku samochody osobowe, motocykle, skutery oraz silniki.
+              </p>
+              <span>Modele </span>
+              <ol>
+                <li>i5 M60 xDrive</li>
+                <li>M1 (E26)</li>
+                <li>SERII 1 M COUPÉ (E82)</li>
+              </ol>
+              <label for="select-like-BMW"> Mój ulubiony model: </label>
+              <select name="modeleBMW" id="select-like-BMW">
+                <option value="m60">i5 M60 xDrive</option>
+                <option value="m26">M1 (E26)</option>
+                <option value="e82">SERII 1 M COUPÉ (E82)</option>
+              </select>
+            </article>
+            <article>
+              <div>
+                <h3>Toyota</h3>
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Toyota_EU.svg/2560px-Toyota_EU.svg.png"
+                  alt="Logo Toyota"
+                  title="Toyota"
+                />
+              </div>
+              <p>
+                <strong>Japoński koncern motoryzacyjny</strong> utworzony w 1937
+                roku.
+              </p>
+              <span>Modele </span>
+              <ol>
+                <li>RAV 4</li>
+                <li>Yaris</li>
+                <li>Corolla</li>
+              </ol>
+              <label for="select-like-toyota"> Mój ulubiony model: </label>
+              <select name="modeleToyoya" id="select-like-toyota">
+                <option value="rav4">RAV 4</option>
+                <option value="yaris">Yaris</option>
+                <option value="corolla">Corolla</option>
+              </select>
+            </article>
+            <article>
+              <div>
+                <h3>Dodge</h3>
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeBiK9PVsQw0w4oYJFvdLJusj82jjclYugCdF5vl63Fg&s"
+                  alt="Logo Dodge"
+                  title="Dodge"
+                />
+              </div>
+              <p>
+                <strong>Amerykański producent samochodów</strong> osobowych,
+                vanów, samochodów sportowych, SUV-ów, pickupów i muscle carów z
+                siedzibą w Auburn Hills działający od 1913 roku.
+              </p>
+              <span>Modele </span>
+              <ol>
+                <li>Caliber</li>
+                <li>Challenger</li>
+                <li>Charger</li>
+              </ol>
+              <label for="select-like-dodge"> Mój ulubiony model: </label>
+              <select name="modeleDodge" id="select-like-dodge">
+                <option value="caliber">Caliber</option>
+                <option value="challenger">Challenger</option>
+                <option value="charger">Charger</option>
+              </select>
+            </article>
+          </div>
+        </section>
+        <section>
+          <h2>Podróże</h2>
+          <div class="articles-container">
+            <article>
+              <div>
+                <h3>Argentyna</h3>
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/240px-Flag_of_Argentina.svg.png"
+                  alt="Flaga Argentyny"
+                  title="Argentyna"
+                />
+              </div>
+              <p>
+                <strong>Państwo w Ameryce Południowej</strong>, w
+                południowo-wschodniej części kontynentu, nad Oceanem
+                Atlantyckim.
+              </p>
+            </article>
+            <article>
+              <div>
+                <h3>USA</h3>
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/240px-Flag_of_the_United_States.svg.png"
+                  alt="Flaga USA"
+                  title="USA"
+                />
+              </div>
+              <p>
+                <strong>Państwo federacyjne w Ameryce Północnej</strong>
+                składające się z 50 stanów.
+              </p>
+            </article>
+            <article>
+              <div>
+                <h3>Japonia</h3>
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Flag_of_Japan.svg/240px-Flag_of_Japan.svg.png"
+                  alt="Flaga Japonii"
+                  title="Japonia"
+                />
+              </div>
+              <p>
+                <strong>Państwo wyspiarskie</strong> położone na wąskim łańcuchu
+                wysp na zachodnim Pacyfiku, u wschodnich wybrzeży
+                <strong>Azji</strong>.
+              </p>
+            </article>
+          </div>
+          <h4>Ciekawostki</h4>
+          <table cellpadding="4">
+            <thead>
+              <tr>
+                <th>Państwo</th>
+                <th>Stolica</th>
+                <th>Głowa państwa</th>
+                <th>Godło</th>
+                <th>Liczba ludności</th>
+                <th>Powierzchnia (km2)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Argentyna</td>
+                <td>Buenos Aires</td>
+                <td>prezydent Javier Milei</td>
+                <td>
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Coat_of_arms_of_Argentina.svg/92px-Coat_of_arms_of_Argentina.svg.png"
+                    alt="Godło Argentyny"
+                    title="Argentyna"
+                  />
+                </td>
+                <td>47 327 407</td>
+                <td>2 780 400</td>
+              </tr>
+              <tr>
+                <td>USA</td>
+                <td>Waszyngton</td>
+                <td>prezydent Joe Biden</td>
+                <td>
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Great_Seal_of_the_United_States_%28obverse%29.svg/85px-Great_Seal_of_the_United_States_%28obverse%29.svg.png"
+                    alt="Godło USA"
+                    title="USA"
+                  />
+                </td>
+                <td>332 403 650</td>
+                <td>9 833 520</td>
+              </tr>
+              <tr>
+                <td>Japonia</td>
+                <td>Tokio</td>
+                <td>cesarz Naruhito</td>
+                <td>
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Imperial_Seal_of_Japan.svg/100px-Imperial_Seal_of_Japan.svg.png"
+                    alt="Godło Japonia"
+                    title="Japonia"
+                  />
+                </td>
+                <td>124 090 000</td>
+                <td>377 972</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <section>
+        <div class="links">
+          <span><strong>Tematyczne linki</strong></span>
+          <!-- <nav> -->
+          <ul>
+            <li>
+              <a href="https://google.pl"> Galeria Gry komputerowe </a>
+            </li>
+            <li>
+              <a href="https://google.pl"> Galeria Samochodów </a>
+            </li>
+            <li>
+              <a href="https://google.pl"> Galeria Podróży </a>
+            </li>
+          </ul>
+        </div>
+        <!-- </nav> -->
+      </section>
+      <p>Copyright © 2023. Wszelkie prawa zastrzeżone</p>
+    </footer>
+  </body>
+</html>

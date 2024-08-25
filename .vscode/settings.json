@@ -1,0 +1,4 @@
+{
+    "prettier.semi": true,
+    "auto-rename-tag.activationOnLanguage": ["html", "xml", "php", "javascript"]
+}

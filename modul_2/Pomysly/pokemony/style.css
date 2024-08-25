@@ -1,0 +1,23 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  padding: 10px;
+  box-sizing: border-box;
+}
+table {
+  width: 100%;
+  border: 1px solid black;
+}
+thead {
+  background-color: rgb(91, 91, 180);
+}
+/* .Tabela1 {
+  display: none;
+} */
+img {
+  /* width: 50px; */
+  height: 50px;
+  max-width: 100px;
+}

@@ -1,0 +1,72 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stylizowanie LiveCodding</title>
+    <style>
+      #btns-wrapper {
+        display: inline;
+        flex-wrap: wrap;
+        gap: 10px 20px;
+        margin-top: 20px;
+      }
+      #btns-wrapper button {
+        min-width: 40px;
+        height: 40px;
+        /* border-radius: 40% 10%; */
+        transform: rotate(0deg) skew(10deg) tra;
+      }
+      .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 10px;
+        border: 1px dashed black;
+        box-sizing: ;
+      }
+      .grid-container * {
+        width: auto;
+        height: auto;
+        min-height: 40px;
+        min-width: 40px;
+      }
+      .item1 {
+        grid-column: 1 / 4;
+        grid-row: 1;
+        background-color: red;
+      }
+      .item2 {
+        grid-column: 2;
+        grid-row: 1 / 4;
+        background-color: green;
+      }
+      .item3 {
+        grid-column: 3;
+        grid-row: 3 / 4;
+        justify-self: center;
+        align-self: end;
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Wybierz stylizację</h2>
+    <select id="styleIt" name="styleIt">
+      <option value="background">Zmień kolor tła</option>
+      <option value="text">Zmień kolor tekstu</option>
+    </select>
+    <div id="btns-wrapper"></div>
+    <p>Stylizowany tekst</p>
+    <script src="scriptColorBoxs.js"></script>
+    <div class="grid-container">
+      <div class="item1"></div>
+      <div class="item2"></div>
+      <div class="item3"></div>
+    </div>
+    <ol type="I">
+      <li></li>
+      <li></li>
+      <li></li>
+    </ol>
+  </body>
+</html>

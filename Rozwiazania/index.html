@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <title>Rozwiązania</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Opis mojej strony co w niej jest" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Michał Gołębiowski" />
+    <meta name="keyworld" content="jakieś,krótkie, słowa" />
+    <!-- <link rel="stylsheet" type="text/css" href="style.css" />  dlaczego to nie działa? -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <header>
+    <div>
+      <h1>Ciekawostki ze świata</h1>
+      <nav>
+        <ul>
+          <li><a href="#games" class="menu">Gry komputerowe</a></li>
+          <li><a href="#cars" class="menu">Samochody</a></li>
+          <li><a href="#travelling" class="menu">Podróże</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <body>
+    <main>
+      <section>
+        <h2 class="darkSlateBlue">Logowanie</h2>
+        <div class="formWrapper">
+          <form>
+            <input placeholder="Name" type="text" class="primary-input" />
+            <input placeholder="Email" type="email" class="primary-input" />
+            <input placeholder="Hasło" type="password" class="primary-input" />
+            <div>
+              <label for="input-checkbox">Zapis aktywności</label>
+              <input type="checkbox" id="input-checkbox" />
+            </div>
+            <div>
+              <span>Czy wrócisz do nas jeszcze? </span>
+              <input type="radio" name="comeback" id="radio-yes" /><label
+                for="radio-yes"
+                >Tak</label
+              >
+              <input type="radio" name="comeback" id="radio-no" /><label
+                for="radio-no"
+                >Nie</label
+              >
+            </div>
+            <div>
+              <button>Wyślij</button> <button type="reset">Reset</button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <div>
+        <section>
+          <h2 class="darkOliveGreen">Gry komputerowe</h2>
+          <div>
+            <article>
+              <div>
+                <h3 class="darkGoldenRod">Wiedźmin 3</h3>
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/en/5/53/The_Witcher_video_game_series_logo.png"
+                  alt="witcher"
+                />
+              </div>
+              <p>
+                Gra action RPG, stanowiąca trzecią część przygód
+                <strong>Geralta z Rivii</strong>.
+              </p>
+            </article>
+            <article>
+              <div>
+                <h3 class="darkGoldenRod">Gran Tourismo 7</h3>
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Gran_Turismo_7_logo.svg/2560px-Gran_Turismo_7_logo.svg.png"
+                  alt="gran-turismo"
+                />
+              </div>
+              <p>
+                Siódma pełnoprawna odsłona flagowego cyklu
+                <strong>symulatorów samochodowych</strong>.
+              </p>
+            </article>
+            <article>
+              <div>
+                <h3 class="darkGoldenRod">FIFA 22</h3>
+                <img
+                  src="https://cdn2.downdetector.com/static/uploads/logo/Fifa-ea.png"
+                  alt="fifa22"
+                />
+              </div>
+              <p>
+                FIFA 22 to kolejna odsłona corocznego cyklu
+                <strong>gier piłkarskich</strong>.
+              </p>
+            </article>
+          </div>
+        </section>
+        <section>
+          <h2 class="darkOliveGreen">Samochody</h2>
+          <div>
+            <article>
+              <div>
+                <h3 class="darkGoldenRod">BMW</h3>
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/BMW.svg/2048px-BMW.svg.png"
+                  alt="bmw"
+                />
+              </div>
+              <p>
+                <strong>Niemiecki koncern motoryzacyjny</strong> produkujący od
+                1916 roku samochody osobowe, motocykle, skutery oraz silniki.
+              </p>
+              <span>Modele</span>
+              <ol>
+                <li>e46</li>
+                <li>e39</li>
+                <li>e61</li>
+              </ol>
+              <label for="bmw" class="saddleBrown">Mój ulubiony model:</label>
+              <select name="BMW" id="bmw">
+                <option value="e46">e46</option>
+                <option value="e39">e39</option>
+                <option value="e61">e61</option>
+              </select>
+            </article>
+            <article>
+              <div>
+                <h3 class="darkGoldenRod">Toyota</h3>
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Toyota_EU.svg/2560px-Toyota_EU.svg.png"
+                  alt="toyota"
+                />
+              </div>
+              <p>
+                <strong>Japoński koncern motoryzacyjny</strong> utworzony w 1937
+                roku.
+              </p>
+              <span>Modele</span>
+              <ol>
+                <li>Corolla</li>
+                <li>Supra</li>
+                <li>AE86</li>
+              </ol>
+              <label for="toyota" class="saddleBrown"
+                >Mój ulubiony model:</label
+              >
+              <select name="toyota" id="toyota">
+                <option value="corolla">Corolla</option>
+                <option value="supra">Supra</option>
+                <option value="ae86">AE86</option>
+              </select>
+            </article>
+            <article>
+              <div>
+                <h3 class="darkGoldenRod">Dodge</h3>
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeBiK9PVsQw0w4oYJFvdLJusj82jjclYugCdF5vl63Fg&s"
+                  alt="dodge"
+                />
+              </div>
+              <p>
+                <strong>Amerykański producent samochodów</strong> osobowych,
+                vanów, samochodów sportowych, SUV-ów, pickupów i muscle carów z
+                siedzibą w Auburn Hills działający od 1913 roku.
+              </p>
+              <span>Modele</span>
+              <ol>
+                <li>Viper</li>
+                <li>Neon</li>
+                <li>Ram</li>
+              </ol>
+              <label for="dodge" class="saddleBrown">Mój ulubiony model:</label>
+              <select name="dodge" id="dodge">
+                <option>Viper</option>
+                <option>Neon</option>
+                <option>Ram</option>
+              </select>
+            </article>
+          </div>
+        </section>
+        <section>
+          <h2 class="darkOliveGreen">Podróże</h2>
+          <div>
+            <article>
+              <div>
+                <h3 class="darkGoldenRod">Argentyna</h3>
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/240px-Flag_of_Argentina.svg.png"
+                  alt="argentina"
+                />
+              </div>
+              <p>
+                <strong>Państwo w Ameryce Południowej</strong>, w
+                południowo-wschodniej części kontynentu, nad Oceanem
+                Atlantyckim.
+              </p>
+            </article>
+            <article>
+              <div>
+                <h3 class="darkGoldenRod">USA</h3>
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/240px-Flag_of_the_United_States.svg.png"
+                  alt="usa"
+                />
+              </div>
+              <p>
+                <strong>Państwo federacyjne w Ameryce Północnej</strong>
+                składające się z 50 stanów.
+              </p>
+            </article>
+            <article>
+              <div>
+                <h3 class="darkGoldenRod">Japonia</h3>
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Flag_of_Japan.svg/240px-Flag_of_Japan.svg.png"
+                  alt="japan"
+                />
+              </div>
+              <p>
+                <strong>Państwo wyspiarskie</strong> położone na wąskim łańcuchu
+                wysp na zachodnim Pacyfiku, u wschodnich wybrzeży
+                <strong>Azji</strong>.
+              </p>
+            </article>
+          </div>
+          <h4 class="saddleBrown">Ciekawostki</h4>
+          <table>
+            <thead>
+              <tr>
+                <th>Państwo</th>
+                <th>Stolica</th>
+                <th>Głowa państwa</th>
+                <th>Godło</th>
+                <th>Liczba ludności</th>
+                <th>Powierzchnia (km2)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Argentyna</td>
+                <td>Buenos Aires</td>
+                <td>prezydent Javier Milei</td>
+                <td>
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Coat_of_arms_of_Argentina.svg/180px-Coat_of_arms_of_Argentina.svg.png"
+                    alt="Argentina logo"
+                  />
+                </td>
+                <td>45 864 941</td>
+                <td>2 780 400</td>
+              </tr>
+              <tr>
+                <td>USA</td>
+                <td>Waszyngton</td>
+                <td>prezydent Joe Biden</td>
+                <td>
+                  <img
+                    src="https://img.freepik.com/premium-wektory/godlo-panstwowe-stanow-zjednoczonych_141130-5568.jpg"
+                    alt="USA logo"
+                  />
+                </td>
+                <td>332 403 650</td>
+                <td>9 833 520</td>
+              </tr>
+              <tr>
+                <td>Japonia</td>
+                <td>Tokio</td>
+                <td>cesarz Naruhito</td>
+                <td>
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Imperial_Seal_of_Japan.svg/langpl-1500px-Imperial_Seal_of_Japan.svg.png"
+                    alt="Japan logo"
+                  />
+                </td>
+                <td>125 396 901</td>
+                <td>377 972</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <section>
+        <div>
+          <div class="footerListWrapper">
+            <span>Tematyczne linki:</span>
+            <ul>
+              <li>
+                <a href="#game-gallery">Galeria Gry komputerowe</a>
+              </li>
+              <li>
+                <a href="#car-gallery">Galeria Samochodów</a>
+              </li>
+              <li>
+                <a href="#travel-gallery">Galeria Podróży</a>
+              </li>
+            </ul>
+          </div>
+          <p>Copyright © 2023. Wszelkie prawa zastrzeżone</p>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>
