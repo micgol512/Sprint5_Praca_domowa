@@ -1,0 +1,52 @@
+{
+  "books": [
+    {
+      "id": "1",
+      "title": "JavaScript: The Good Parts",
+      "author": "Douglas Crockford",
+      "year": 2008
+    },
+    {
+      "id": "2",
+      "title": "You Don’t Know JS",
+      "author": "Kyle Simpson",
+      "year": 2015
+    },
+    {
+      "id": "3",
+      "title": "Eloquent JavaScript",
+      "author": "Marijn Haverbeke",
+      "year": 2018
+    },
+    {
+      "id": "4",
+      "title": "Javascript for Beginners",
+      "author": "bart",
+      "year": 2024
+    },
+    {
+      "id": "5",
+      "title": "new book",
+      "author": "bart",
+      "year": 2024
+    },
+    {
+      "id": "6",
+      "title": "Ogniem i mieczem",
+      "author": "Sienkiewicz",
+      "year": 1962
+    },
+    {
+      "id": "7",
+      "title": "Moja pierwsza biografia",
+      "author": "micgol",
+      "year": 2001
+    },
+    {
+      "title": "Najwspanialsza Żona",
+      "author": "Karolina",
+      "year": 2024,
+      "id": "37YKr5x"
+    }
+  ]
+}

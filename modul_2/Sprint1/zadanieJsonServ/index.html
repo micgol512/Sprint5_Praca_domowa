@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Book Collection</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Book Collection</h1>
+    <div>
+      <input type="text" id="title" placeholder="Title" />
+      <input type="text" id="author" placeholder="Author" />
+      <input type="number" id="year" placeholder="Year" />
+      <button onclick="addBook()">Add Book</button>
+    </div>
+    <div>
+      <input
+        type="text"
+        id="filter-author"
+        placeholder="Filter by author"
+        oninput="loadBooks()"
+      />
+      <select id="sort">
+        <option value="title" sort="asc">Title ∧</option>
+        <option value="title" sort="desc">Title ∨</option>
+        <option value="year" sort="asc">Year ∧</option>
+        <option value="year" sort="desc">Year ∨</option>
+      </select>
+      <button id="filter-button" onclick="loadBooks()">Filter/Sort</button>
+    </div>
+    <ul id="book-list"></ul>
+    <div>
+      <button onclick="prevPage()">Previous</button>
+      <span id="page-info">Page 1</span>
+      <button onclick="nextPage()">Next</button>
+      <label for="pages">Items:</label>
+      <select name="pages" id="item-amount" onchange="loadBooks()">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5" selected>5</option>
+      </select>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

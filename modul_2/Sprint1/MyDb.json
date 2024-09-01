@@ -1,0 +1,24 @@
+{
+  "posts": [
+    { "id": 1, "title": "js-async", "author": "bart" },
+    { "id": 2, "title": "jak poznać przyjaciół", "author": "carnegi" }
+  ],
+  "comments": [
+    { "id": 1, "body": "JS is awesome!!!", "postID": 1 },
+    { "id": 2, "body": "Wow, JS is my love <3", "postID": 1 },
+    { "id": 3, "body": "I need to show JS to my kids", "postID": 1 }
+  ],
+  "profile": [
+    { "name": "bart", "age": 33, "city": "warszawa" },
+    { "name": "michał", "age": 33, "city": "łochów" },
+    { "name": "anna", "age": 48, "city": "warszawa" },
+    { "name": "anna", "age": 28, "city": "kraków" },
+    { "name": "karolina", "age": 31, "city": "łochów" },
+    { "name": "wiesława", "age": 85, "city": "burakowskie" },
+    { "name": "mateusz", "age": 18, "city": "warszawa" },
+    { "name": "julia", "age": 14, "city": "łochów" },
+    { "name": "grzegorz", "age": 20, "city": "zągoty" },
+    { "name": "marcin", "age": 35, "city": "grodzisk mazowiecki" },
+    { "name": "daniel", "age": 23, "city": "zągoty" }
+  ]
+}

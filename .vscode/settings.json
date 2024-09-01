@@ -1,4 +1,5 @@
 {
     "prettier.semi": true,
+    "editor.formatOnSave": true,
     "auto-rename-tag.activationOnLanguage": ["html", "xml", "php", "javascript"]
 }
