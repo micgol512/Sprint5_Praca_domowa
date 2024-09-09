@@ -1,0 +1,20 @@
+#final-form {
+  display: flex;
+  flex-flow: column nowrap;
+  color: rgb(0, 0, 0);
+  gap: 15px;
+}
+#final-form > div {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: start;
+}
+#final-form span:first-of-type {
+  color: rgb(0, 110, 255);
+}
+.correct {
+  color: green;
+}
+.failed {
+  color: red;
+}

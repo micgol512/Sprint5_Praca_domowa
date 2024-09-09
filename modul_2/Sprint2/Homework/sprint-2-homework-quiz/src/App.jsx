@@ -1,7 +1,9 @@
 import { useState } from "react";
 import QUESTIONS from "./quizQuestions";
 import "./App.css";
-
+import QuestionForm from "./components/QuestionForm";
+import ResultForm from "./components/ResultForm";
+const userAnswers = [];
 function App() {
   const [question, setQuestion] = useState(-1);
   const [score, setScore] = useState(0);
@@ -10,9 +12,12 @@ function App() {
     if (question !== -1 && answer === findCorrectAnswerIndex(QUESTIONS[question])) {
       setScore(score + 1);
     }
+    if (question !== -1) userAnswers.push(answer);
     setQuestion(question + 1);
   };
   const resetQuiz = () => {
+    console.log(userAnswers);
+    userAnswers.length = 0;
     setQuestion(-1);
     setScore(0);
   };
@@ -22,7 +27,7 @@ function App() {
 
   return (
     <>
-      <h1>QUIZ</h1>
+      <h1>QUIZ JAVASCRIPT</h1>
       {question === -1 ? (
         <>
           <h2>Sprawdź swoją wiedzę o programowaniu</h2>
@@ -31,36 +36,12 @@ function App() {
       ) : question !== QUESTIONS.length ? (
         <>
           <h3>Pytanie nr {question + 1}</h3>
-          <h2>{QUESTIONS[question].text}</h2>
-          <div id="answers">
-            <button onClick={() => nextQuestion(0)}>
-              {QUESTIONS[question].answers[0].text}
-            </button>
-            <button onClick={() => nextQuestion(1)}>
-              {QUESTIONS[question].answers[1].text}
-            </button>
-            <button onClick={() => nextQuestion(2)}>
-              {QUESTIONS[question].answers[2].text}
-            </button>
-            <button onClick={() => nextQuestion(3)}>
-              {QUESTIONS[question].answers[3].text}
-            </button>
-          </div>
-          <button onClick={resetQuiz}>Reset QUIZ</button>
-        </>
-      ) : score >= 7 ? (
-        <>
-          <h2 id={"passed"}>
-            Gratulacje!!! Świety wynik: {Math.ceil((score / QUESTIONS.length) * 100)}%
-          </h2>
+          <QuestionForm question={QUESTIONS[question]} nextQuestion={nextQuestion} />
           <button onClick={resetQuiz}>Reset QUIZ</button>
         </>
       ) : (
         <>
-          <h2 id={"failed"}>
-            Niestety, QUIZ niezalizony. Wynik:{" "}
-            {Math.ceil((score / QUESTIONS.length) * 100)}% jest za słaby :(
-          </h2>
+          <ResultForm arrQuestion={QUESTIONS} arrAnswers={userAnswers} />
           <button onClick={resetQuiz}>Reset QUIZ</button>
         </>
       )}
